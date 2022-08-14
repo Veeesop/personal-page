@@ -1,15 +1,24 @@
 import React from 'react';
 import ReactDOM from "react-dom/client";
 import App from './App';
-import { Provider } from "react-redux";
-import store from "./store";
+import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
+
+const client = new ApolloClient({
+  uri: "https://api.github.com/graphql",
+  headers: {
+    Authorization: `bearer ${process.env.REACT_APP_GITHUB_TOKEN}`,
+  },
+  cache: new InMemoryCache(),
+});
+
+console.log(process.env.REACT_APP_GITHUB_TOKEN);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <ApolloProvider client={client}>
       <App />
-    </Provider>
+    </ApolloProvider>
   </React.StrictMode>
 );
 
