@@ -1,5 +1,5 @@
 import { useQuery, gql } from "@apollo/client";
-
+import './GithubPins.scss'
 
 const GITHUB_QUERY = gql`
 {
@@ -41,27 +41,23 @@ export const GithubPins = () => {
     return (
         <div>
             <h2>Github Pins</h2>
-            <GithubCard/>
-            <ul>
                 {data.user.pinnedItems.edges.map((item) => {
                     return(
-                    <li key={item.node.id}>{item.node.name}</li>
+                        <GithubCard info={item} key={item.node.id}/>
                     )
                 })}
-            </ul>
-            {/* <ul>
-        {data.launchesPast.map((launch) => (
-          <li key={launch.id}>{launch.mission_name}</li>
-        ))}
-      </ul> */}
         </div>
         
     )
 }
 
-export const GithubCard = () => {
+export const GithubCard = ({info}) => {
     return (
-        <h3>Github Card</h3>
+        <>
+            <div>{info.node.name}</div>
+            <a href={info.node.url}>Link</a>
+        </>
+    
     )
 }
 

@@ -1,0 +1,26 @@
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.hello {
+    margin-left: 2em;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: .75em;
+
+}
+
+.name-title {
+    margin-left: 4em;
+    font-family: 'Press Start 2P', cursive;
+    letter-spacing: .75em;
+}
+
+.job-title {
+    margin-left: 3em;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: .25em;
+}
