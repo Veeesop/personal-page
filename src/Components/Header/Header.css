@@ -3,24 +3,31 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    background: none;
 
 }
 
 .hello {
+    font-size: 2em;
     margin-left: 2em;
     font-family: 'Roboto', sans-serif;
     letter-spacing: .75em;
-
+    color: #7cdf52;
 }
 
 .name-title {
+    display: flex;
+        font-size: 3em;
     margin-left: 4em;
     font-family: 'Press Start 2P', cursive;
     letter-spacing: .75em;
+    color: #56CB24;
 }
 
 .job-title {
+    font-size: 1em;
     margin-left: 3em;
     font-family: 'Roboto', sans-serif;
     letter-spacing: .25em;
+    color: #33910a;
 }
