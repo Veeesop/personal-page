@@ -12,16 +12,16 @@
     margin-left: 2em;
     font-family: 'Roboto', sans-serif;
     letter-spacing: .75em;
-    color: #7cdf52;
+
 }
 
 .name-title {
     display: flex;
         font-size: 3em;
     margin-left: 4em;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Roboto', sans-serif;
     letter-spacing: .75em;
-    color: #56CB24;
+
 }
 
 .job-title {
@@ -29,5 +29,10 @@
     margin-left: 3em;
     font-family: 'Roboto', sans-serif;
     letter-spacing: .25em;
-    color: #33910a;
+}
+
+.about-paragraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

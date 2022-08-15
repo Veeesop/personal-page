@@ -48,16 +48,16 @@ export const GithubPins = () => {
     console.log(data)
 
     return (
+       
         <div className="projects-container">
+
                 {data.user.pinnedItems.edges.map((item, index) => {
                     return(
-                        <ParallaxLayer offset={index * .5} speed={1.5} >
-                            <GithubCard info={item} key={item.node.id}/>
-                        </ParallaxLayer>
+                        <GithubCard info={item} key={item.node.id}/>
                     )
                 })}
         </div>
-        
+
     )
 }
 
