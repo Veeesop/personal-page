@@ -1,0 +1,15 @@
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.github-card-container {
+    margin: 1em;
+}
+
+.learn-more-button {
+    display: flex;
+    margin-left: 14px;
+}
