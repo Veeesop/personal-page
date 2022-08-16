@@ -1,0 +1,21 @@
+.work-history-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.work-history-title {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: -200px;
+}
+
+.work-history-timeline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-width: 1000px;
+}
