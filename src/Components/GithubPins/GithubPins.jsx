@@ -1,8 +1,8 @@
 import { useQuery, gql } from "@apollo/client";
 import './GithubPins.css'
 import { Card, CardContent, Typography, CardActions, Button } from "@mui/material";
-import  {FaCodeBranch}  from 'react-icons/fa'
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import  {FaCodeBranch, FaStar}  from 'react-icons/fa'
+import {GoPrimitiveDot} from 'react-icons/go'
 
 
 const GITHUB_QUERY = gql`
@@ -32,6 +32,7 @@ const GITHUB_QUERY = gql`
               forks {
                 totalCount
               }
+              stargazerCount
             }
           }
         }
@@ -48,24 +49,27 @@ export const GithubPins = () => {
     console.log(data)
 
     return (
-       
-        <div className="projects-container">
-
+        <div className="github-display">
+            <div className="github-title">
+                <Typography sx={{ fontSize: 40, m:5 }} color="text.secondary" gutterBottom>
+                    GitHub Repositories
+                </Typography>
+            </div>
+            <div className="projects-container">
                 {data.user.pinnedItems.edges.map((item, index) => {
                     return(
                         <GithubCard info={item} key={item.node.id}/>
                     )
                 })}
+            </div>
         </div>
-
     )
 }
 
 export const GithubCard = ({info}) => {
-    
     return (
         <div className="github-card-container">
-           <Card sx={{ width: 275 }}>
+           <Card sx={{ width: 400 }}>
             <CardContent>
                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                     {info.node.name}
@@ -74,7 +78,12 @@ export const GithubCard = ({info}) => {
 
                 </Typography>
                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                {info.node.languages.edges.map(language => `${language.node.name} `)}
+                {info.node.languages.edges.map(language => 
+                    <>
+                        <GoPrimitiveDot color={language.node.color}/>
+                        <span className="language-dot">{language.node.name}</span> 
+                    </>
+                    )}
                 </Typography>
                 <Typography variant="body2">
                  {info.node.description}
@@ -82,12 +91,14 @@ export const GithubCard = ({info}) => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <div><FaCodeBranch/><span>  {info.node.forks.totalCount} </span></div>
-                <Button sx={{marginRight: "20px"}}size="small">Learn More</Button>
+                <div className="github-counts">
+                    <FaCodeBranch/><span className="fork-count">{info.node.forks.totalCount}</span>
+                    <FaStar/><span className="star-count">{info.node.stargazerCount}</span>
+                </div>
+                <Button href={info.node.url} size="small">Learn More</Button>
             </CardActions>
         </Card>
         </div>
-    
     )
 }
 
