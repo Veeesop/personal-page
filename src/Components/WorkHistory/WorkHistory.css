@@ -17,5 +17,9 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    min-width: 1000px;
-}
+    min-width: 900px;
+    }
+    
+    .opposite-ul {
+        direction: rtl;
+    }

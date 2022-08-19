@@ -46,7 +46,7 @@ export const GithubPins = () => {
 
     if (loading) return "Loading...";
     if (error) return <pre>{error.message}</pre>
-    console.log(data)
+
 
     return (
         <div className="github-display">
@@ -56,9 +56,11 @@ export const GithubPins = () => {
                 </Typography>
             </div>
             <div className="projects-container">
-                {data.user.pinnedItems.edges.map((item, index) => {
+                {data.user.pinnedItems.edges.map((item) => {
                     return(
+                      <div key={item.node.id}>
                         <GithubCard info={item} key={item.node.id}/>
+                      </div>
                     )
                 })}
             </div>
@@ -68,7 +70,7 @@ export const GithubPins = () => {
 
 export const GithubCard = ({info}) => {
     return (
-        <div className="github-card-container">
+        <div className="github-card-container" key={info.node.id}>
            <Card sx={{ width: 400 }}>
             <CardContent>
                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>

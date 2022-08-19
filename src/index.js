@@ -11,7 +11,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-console.log(process.env.REACT_APP_GITHUB_TOKEN);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

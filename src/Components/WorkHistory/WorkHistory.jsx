@@ -6,60 +6,128 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
-import FastfoodIcon from '@mui/icons-material/Fastfood';
-import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import HotelIcon from '@mui/icons-material/Hotel';
 import RepeatIcon from '@mui/icons-material/Repeat';
 import Typography from '@mui/material/Typography';
-import ConstructionIcon from '@mui/icons-material/Construction';
+import {GiFarmer, GiHammerNails} from 'react-icons/gi'
 import './WorkHistory.css'
 
-export default function CustomizedTimeline() {
+export default function WorkTimeline() {
   return (
     <Timeline position="alternate">
       <TimelineItem>
         <TimelineOppositeContent
-          sx={{ m: 'auto 0' }}
+          sx={{ m: 'auto 0', fontSize: 'x-large' }}
           align="right"
-          variant="body2"
+          variant="body1"
           color="text.secondary"
         >
-          9:30 am
+          Aloha Farms
+          <Typography sx={{fontStyle: 'italic'}}>
+            September 2020 - December 2021
+          </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineConnector />
-          <TimelineDot>
-            <FastfoodIcon />
+          <TimelineDot sx={{bgcolor: 'green'}}>
+            <GiFarmer size='25px'/>
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
           <Typography variant="h6" component="span">
-            Eat
+            Orchard Manager
           </Typography>
-          <Typography>Because you need strength</Typography>
+            <ul>
+              <li>
+                Managing harvest and workers
+              </li>
+              <li>
+                Transporting avocados to various farmers markets around the Big Island
+              </li>
+              <li>
+                Moved to Hawaii during the pandemic and learned organic farming techniques
+              </li>
+              <li>
+                Learning new skills comes easy for me although it is much easier on a tropical island
+              </li>
+            </ul>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+      <TimelineOppositeContent
+          sx={{ m: 'auto 0', fontSize: 'x-large' }}
+          align="right"
+          variant="body1"
+          color="text.secondary"
+        >
+          SignMinds
+          <Typography sx={{fontStyle: 'italic'}}>
+          May 2016 - April 2018
+          </Typography>
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineConnector />
+          <TimelineDot sx={{bgcolor: 'darkred'}}>
+            <GiHammerNails size='25px'/>
+          </TimelineDot>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent sx={{ py: '12px', px: 2 }}>
+          <Typography variant="h6" component="span">
+            Night shift lead fabricator
+          </Typography>
+            <ul className='opposite-ul'>
+              <li>
+                Reading and understanding product schematics and assembly instructions
+              </li>
+              <li>
+                Communicating with the engineers to verify dimensions and product specifications
+              </li>
+              <li>
+                Delegation of tasks to the other fabricators in the shop
+              </li>
+              <li>
+                Checking the final product details and packaging for installation 
+              </li>
+            </ul>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent
-          sx={{ m: 'auto 0' }}
-          variant="body2"
+          sx={{ m: 'auto 0', fontSize: 'x-large' }}
+          align="right"
+          variant="body1"
           color="text.secondary"
         >
-          10:00 am
+          SignMinds
+          <Typography sx={{fontStyle: 'italic'}}>
+          May 2014 - May 2016
+          </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineConnector />
-          <TimelineDot color="primary">
-            <LaptopMacIcon />
+          <TimelineDot sx={{bgcolor: 'red'}}>
+            <GiHammerNails size='25px'/>
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
           <Typography variant="h6" component="span">
-            Code
+            Orchard Manager
           </Typography>
-          <Typography>Because it&apos;s awesome!</Typography>
+            <ul>
+              <li>
+                Managing harvest and workers
+              </li>
+              <li>
+                Transporting avocados to various farmers markets around the Big Island
+              </li>
+              <li>
+                Moved to Hawaii during the pandemic and learned organic farming techniques
+              </li>
+              <li>
+                Learning new skills comes easy for me although it is much easier on a tropical island
+              </li>
+            </ul>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -68,7 +136,7 @@ export default function CustomizedTimeline() {
           <TimelineDot color="primary" variant="outlined">
             <HotelIcon />
           </TimelineDot>
-          <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
+          <TimelineConnector/>
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
           <Typography variant="h6" component="span">
@@ -105,7 +173,7 @@ export const WorkHistory = () => {
                 </Typography>
             </div>
             <div className='work-history-timeline'>
-                <CustomizedTimeline/>
+                <WorkTimeline/>
             </div>
         </div>
         

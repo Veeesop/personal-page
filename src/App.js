@@ -1,7 +1,6 @@
 import { GithubPins } from "./Components/GithubPins/GithubPins";
 import { WorkHistory } from "./Components/WorkHistory/WorkHistory";
 import { Header } from "./Components/Header/Header";
-import { Parallax } from "@react-spring/parallax";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
