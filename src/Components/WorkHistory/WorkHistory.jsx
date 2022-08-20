@@ -9,7 +9,8 @@ import TimelineDot from '@mui/lab/TimelineDot';
 import HotelIcon from '@mui/icons-material/Hotel';
 import RepeatIcon from '@mui/icons-material/Repeat';
 import Typography from '@mui/material/Typography';
-import {GiFarmer, GiHammerNails} from 'react-icons/gi'
+import {GiFarmTractor, GiHammerNails} from 'react-icons/gi'
+import { IoIosBrush } from 'react-icons/io'
 import './WorkHistory.css'
 
 export default function WorkTimeline() {
@@ -29,7 +30,7 @@ export default function WorkTimeline() {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot sx={{bgcolor: 'green'}}>
-            <GiFarmer size='25px'/>
+            <GiFarmTractor size='25px'/>
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
@@ -66,8 +67,7 @@ export default function WorkTimeline() {
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineConnector />
-          <TimelineDot sx={{bgcolor: 'darkred'}}>
+        <TimelineDot sx={{bgcolor: 'darkred'}}>
             <GiHammerNails size='25px'/>
           </TimelineDot>
           <TimelineConnector />
@@ -105,59 +105,61 @@ export default function WorkTimeline() {
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot sx={{bgcolor: 'red'}}>
+          <TimelineDot sx={{bgcolor: 'darkred'}}>
             <GiHammerNails size='25px'/>
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
           <Typography variant="h6" component="span">
-            Orchard Manager
+          Assistant Fabricator
           </Typography>
             <ul>
               <li>
-                Managing harvest and workers
+                Assisted the lead fabricator building large scale commercial signage
               </li>
               <li>
-                Transporting avocados to various farmers markets around the Big Island
+              Ensuring that all required parts for assembly are present
               </li>
               <li>
-                Moved to Hawaii during the pandemic and learned organic farming techniques
-              </li>
-              <li>
-                Learning new skills comes easy for me although it is much easier on a tropical island
+              Responsible for forklift operation and safety during material unloading and during delivery of the final product
               </li>
             </ul>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
-        <TimelineSeparator>
-          <TimelineConnector />
-          <TimelineDot color="primary" variant="outlined">
-            <HotelIcon />
-          </TimelineDot>
-          <TimelineConnector/>
-        </TimelineSeparator>
-        <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span">
-            Sleep
+        <TimelineOppositeContent
+          sx={{ m: 'auto 0', fontSize: 'x-large' }}
+          align="right"
+          variant="body1"
+          color="text.secondary"
+        >
+            James Breener
+          <Typography sx={{fontStyle: 'italic'}}>
+            November 2012 - May 2014
           </Typography>
-          <Typography>Because you need rest</Typography>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
+        </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
-          <TimelineDot color="secondary">
-            <RepeatIcon />
+          <TimelineDot sx={{bgcolor: 'purple'}}>
+            <IoIosBrush size='25px'/>
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
           <Typography variant="h6" component="span">
-            Repeat
+            Production Assistant
           </Typography>
-          <Typography>Because this is the life you love!</Typography>
+            <ul className='opposite-ul'>
+              <li>
+                Adapted frequently to various locations, roles and responsibilities
+              </li>
+              <li>
+                Responsible for assisting the lead fabricator and shop maintenance 
+              </li>
+              <li>
+              Multitasking was paramount in this role, as was keeping pace to complete projects on time.
+              </li>
+            </ul>
         </TimelineContent>
       </TimelineItem>
     </Timeline>
