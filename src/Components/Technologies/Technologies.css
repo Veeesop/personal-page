@@ -1,0 +1,20 @@
+.technologies-page {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 40px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 900px
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    margin: 20px
+}

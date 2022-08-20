@@ -6,8 +6,6 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
-import HotelIcon from '@mui/icons-material/Hotel';
-import RepeatIcon from '@mui/icons-material/Repeat';
 import Typography from '@mui/material/Typography';
 import {GiFarmTractor, GiHammerNails} from 'react-icons/gi'
 import { IoIosBrush } from 'react-icons/io'
@@ -182,8 +180,3 @@ export const WorkHistory = () => {
     )
 }
 
-export const JobCard = () => {
-    return (
-        <h3>Job</h3>
-    )
-}
